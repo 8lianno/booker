@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "total_words_min": 14000,
+  "total_words_target": [16000, 22000],
+  "anchor_density": {"min_per_1000_words": 5.0, "sections": [2, 12]},
+  "gates": {
+    "anchors_resolve_min": 0.98,
+    "quote_match_min": 0.90,
+    "claim_support_min": 0.90,
+    "audit_sample_size": 20,
+    "back_half_ratio_min": 0.70,
+    "floors_met_min": 15,
+    "mandatory_floor_sections": [4, 5, 6, 7],
+    "provenance_violations_max": 0
+  },
+  "score_weights": {
+    "anchor_validity": 0.35,
+    "claim_support": 0.25,
+    "coverage": 0.20,
+    "quote_match": 0.10,
+    "completeness": 0.10
+  },
+  "badges": {"verified_min_score": 90, "warnings_min_score": 75},
+  "sections": [
+    {"id": 0, "heading": "0. Source Note And Confidence", "min_words": 150, "anchor_min": 0, "special": ["source_yaml"]},
+    {"id": 1, "heading": "1. One-Page Orientation", "min_words": 300, "anchor_min": 0},
+    {"id": 2, "heading": "2. What This Book Is Trying To Do", "min_words": 600, "anchor_min": 3},
+    {"id": 3, "heading": "3. Structural Architecture", "min_words": 1500, "anchor_min": 0, "special": ["structure_table"]},
+    {"id": 4, "heading": "4. Full Terminology And Concept System", "min_words": 3000, "anchor_min": 0, "special": ["term_entries"]},
+    {"id": 5, "heading": "5. Chapter-By-Chapter Reader Guide", "min_words": 0, "anchor_min": 0, "per_chapter": {"min_words": 350, "scale_above_chapters": 22, "scaled_budget": 7700, "scaled_floor": 150, "anchor_min": 3}, "special": ["chapter_entries", "back_half"]},
+    {"id": 6, "heading": "6. Main Argument Chain", "min_words": 1000, "anchor_min": 0, "special": ["argument_steps"]},
+    {"id": 7, "heading": "7. Evidence Ledger", "min_words": 1500, "anchor_min": 0, "special": ["evidence_table"]},
+    {"id": 8, "heading": "8. Narrative, Worldview, And Persuasive Strategy", "min_words": 1000, "anchor_min": 5},
+    {"id": 9, "heading": "9. Load-Bearing Versus Secondary", "min_words": 400, "anchor_min": 1},
+    {"id": 10, "heading": "10. What Readers Usually Misunderstand", "min_words": 400, "anchor_min": 5, "special": ["misreading_pairs"]},
+    {"id": 11, "heading": "11. Practical Meaning", "min_words": 700, "anchor_min": 4},
+    {"id": 12, "heading": "12. Internal Tensions And Limits", "min_words": 500, "anchor_min": 6, "special": ["tension_items"]},
+    {"id": 13, "heading": "13. External Evaluation And Updates", "min_words": 0, "anchor_min": 0, "special": ["external_citations"]},
+    {"id": 14, "heading": "14. Memory And Recall", "min_words": 1200, "anchor_min": 0, "special": ["recall_bank"]},
+    {"id": 15, "heading": "15. What This Dossier Cannot Fully Replace", "min_words": 200, "anchor_min": 0},
+    {"id": 16, "heading": "16. Coverage Audit And Verification", "min_words": 0, "anchor_min": 0, "special": ["verification_blocks"]}
+  ],
+  "evidence_types": ["study", "data", "case", "story", "thought-experiment", "authority", "analogy"],
+  "evidence_weights": ["foundational", "illustrative", "rhetorical", "transitional"],
+  "recall": {"bank_size_formula": "chapters + 8", "bank_size_min": 20, "synthesis_min": 8},
+  "terminology": {"entry_min_formula": "max(15, chapters)"}
+}
