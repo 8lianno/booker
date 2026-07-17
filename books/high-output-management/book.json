@@ -1,0 +1,476 @@
+{
+  "slug": "high-output-management",
+  "title": "High Output Management",
+  "authors": [
+    "Andrew S. Grove"
+  ],
+  "source": {
+    "file": "source/book.epub",
+    "sha256": "aefadc7724086c2e4c2727f7ff92f0672cd2b59c4250b926323cff92cbc60c29",
+    "toc": "ncx",
+    "method": "stdlib",
+    "structure": "toc"
+  },
+  "stats": {
+    "words": 68016,
+    "chapters": 19,
+    "front": 5,
+    "back": 1,
+    "paragraphs": 1030
+  },
+  "chapters": [
+    {
+      "id": "fm01",
+      "index": 1,
+      "title": "About the Author",
+      "part": null,
+      "kind": "front",
+      "words": 88,
+      "paragraphs": 3,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm02",
+      "index": 2,
+      "title": "Title Page",
+      "part": null,
+      "kind": "front",
+      "words": 0,
+      "paragraphs": 0,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm03",
+      "index": 3,
+      "title": "Copyright",
+      "part": null,
+      "kind": "front",
+      "words": 156,
+      "paragraphs": 17,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm04",
+      "index": 4,
+      "title": "Acknowledgments",
+      "part": null,
+      "kind": "front",
+      "words": 225,
+      "paragraphs": 4,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Acknowledgments"
+        }
+      ]
+    },
+    {
+      "id": "fm05",
+      "index": 5,
+      "title": "Contents",
+      "part": null,
+      "kind": "front",
+      "words": 126,
+      "paragraphs": 30,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Contents"
+        }
+      ]
+    },
+    {
+      "id": "ch01",
+      "index": 6,
+      "title": "Introduction",
+      "part": null,
+      "kind": "chapter",
+      "words": 3841,
+      "paragraphs": 56,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Introduction"
+        }
+      ]
+    },
+    {
+      "id": "ch02",
+      "index": 7,
+      "title": "Foreword",
+      "part": null,
+      "kind": "chapter",
+      "words": 2510,
+      "paragraphs": 38,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Foreword to the Vintage Books Edition"
+        }
+      ]
+    },
+    {
+      "id": "ch03",
+      "index": 8,
+      "title": "Chapter 1: The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal…)",
+      "part": "Part I: The Breakfast Factory",
+      "kind": "chapter",
+      "words": 3386,
+      "paragraphs": 36,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "1"
+        },
+        {
+          "para": 2,
+          "text": "The Basics of Production: Delivering a Breakfast"
+        }
+      ]
+    },
+    {
+      "id": "ch04",
+      "index": 9,
+      "title": "Chapter 2: Managing the Breakfast Factory",
+      "part": "Part I: The Breakfast Factory",
+      "kind": "chapter",
+      "words": 5822,
+      "paragraphs": 83,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "2"
+        },
+        {
+          "para": 2,
+          "text": "Managing the Breakfast Factory"
+        }
+      ]
+    },
+    {
+      "id": "ch05",
+      "index": 10,
+      "title": "Chapter 3: Managerial Leverage",
+      "part": "Part II: Management is a Team Game",
+      "kind": "chapter",
+      "words": 8833,
+      "paragraphs": 142,
+      "oversize": true,
+      "headings": [
+        {
+          "para": 1,
+          "text": "3"
+        },
+        {
+          "para": 2,
+          "text": "Managerial Leverage"
+        }
+      ]
+    },
+    {
+      "id": "ch06",
+      "index": 11,
+      "title": "Chapter 4: Meetings—The Medium of Managerial Work",
+      "part": "Part II: Management is a Team Game",
+      "kind": "chapter",
+      "words": 4962,
+      "paragraphs": 84,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "4"
+        },
+        {
+          "para": 2,
+          "text": "Meetings—The Medium of Managerial Work"
+        }
+      ]
+    },
+    {
+      "id": "ch07",
+      "index": 12,
+      "title": "Chapter 5: Decisions, Decisions",
+      "part": "Part II: Management is a Team Game",
+      "kind": "chapter",
+      "words": 4122,
+      "paragraphs": 39,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "5"
+        },
+        {
+          "para": 2,
+          "text": "Decisions, Decisions"
+        }
+      ]
+    },
+    {
+      "id": "ch08",
+      "index": 13,
+      "title": "Chapter 6: Planning: Today’s Actions for Tomorrow’s Output",
+      "part": "Part II: Management is a Team Game",
+      "kind": "chapter",
+      "words": 3828,
+      "paragraphs": 46,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "6"
+        },
+        {
+          "para": 2,
+          "text": "Planning: Today’s Actions for Tomorrow’s Output"
+        }
+      ]
+    },
+    {
+      "id": "ch09",
+      "index": 14,
+      "title": "Chapter 7: The Breakfast Factory Goes National",
+      "part": "Part III: Team of Teams",
+      "kind": "chapter",
+      "words": 1138,
+      "paragraphs": 13,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "7"
+        },
+        {
+          "para": 2,
+          "text": "The Breakfast Factory Goes National"
+        }
+      ]
+    },
+    {
+      "id": "ch10",
+      "index": 15,
+      "title": "Chapter 8: Hybrid Organizations",
+      "part": "Part III: Team of Teams",
+      "kind": "chapter",
+      "words": 2284,
+      "paragraphs": 27,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "8"
+        },
+        {
+          "para": 2,
+          "text": "Hybrid Organizations"
+        }
+      ]
+    },
+    {
+      "id": "ch11",
+      "index": 16,
+      "title": "Chapter 9: Dual Reporting",
+      "part": "Part III: Team of Teams",
+      "kind": "chapter",
+      "words": 3218,
+      "paragraphs": 36,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "9"
+        },
+        {
+          "para": 2,
+          "text": "Dual Reporting"
+        }
+      ]
+    },
+    {
+      "id": "ch12",
+      "index": 17,
+      "title": "Chapter 10: Modes of Control",
+      "part": "Part III: Team of Teams",
+      "kind": "chapter",
+      "words": 2659,
+      "paragraphs": 34,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "10"
+        },
+        {
+          "para": 2,
+          "text": "Modes of Control"
+        }
+      ]
+    },
+    {
+      "id": "ch13",
+      "index": 18,
+      "title": "Chapter 11: The Sports Analogy",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 4105,
+      "paragraphs": 55,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "11"
+        },
+        {
+          "para": 2,
+          "text": "The Sports Analogy"
+        }
+      ]
+    },
+    {
+      "id": "ch14",
+      "index": 19,
+      "title": "Chapter 12: Task-Relevant Maturity",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 2510,
+      "paragraphs": 35,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "12"
+        },
+        {
+          "para": 2,
+          "text": "Task-Relevant Maturity"
+        }
+      ]
+    },
+    {
+      "id": "ch15",
+      "index": 20,
+      "title": "Chapter 13: Performance Appraisal: Manager as Judge and Jury",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 5744,
+      "paragraphs": 76,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "13"
+        },
+        {
+          "para": 2,
+          "text": "Performance Appraisal: Manager as Judge and Jury"
+        }
+      ]
+    },
+    {
+      "id": "ch16",
+      "index": 21,
+      "title": "Chapter 14: Two Difficult Tasks",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 2763,
+      "paragraphs": 37,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "14"
+        },
+        {
+          "para": 2,
+          "text": "Two Difficult Tasks"
+        }
+      ]
+    },
+    {
+      "id": "ch17",
+      "index": 22,
+      "title": "Chapter 15: Compensation as Task-Relevant Feedback",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 2259,
+      "paragraphs": 22,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "15"
+        },
+        {
+          "para": 2,
+          "text": "Compensation as Task-Relevant Feedback"
+        }
+      ]
+    },
+    {
+      "id": "ch18",
+      "index": 23,
+      "title": "Chapter 16: Why Training Is the Boss’s Job",
+      "part": "Part IV: The Players",
+      "kind": "chapter",
+      "words": 2154,
+      "paragraphs": 29,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "16"
+        },
+        {
+          "para": 2,
+          "text": "Why Training Is the Boss’s Job"
+        }
+      ]
+    },
+    {
+      "id": "ch19",
+      "index": 24,
+      "title": "One More Thing…",
+      "part": null,
+      "kind": "chapter",
+      "words": 718,
+      "paragraphs": 56,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "One More Thing…"
+        }
+      ]
+    },
+    {
+      "id": "bm01",
+      "index": 25,
+      "title": "Notes",
+      "part": null,
+      "kind": "back",
+      "words": 565,
+      "paragraphs": 32,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Notes"
+        },
+        {
+          "para": 29,
+          "text": "What’s next on your reading list?"
+        }
+      ]
+    }
+  ]
+}

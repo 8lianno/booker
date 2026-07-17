@@ -1,0 +1,30 @@
+{
+  "book_json_sha256_12": "dcfba2c4fb14",
+  "chapters": [
+    {"id": "fm01", "analyze": false, "title": "About the Author", "reason": "front matter"},
+    {"id": "fm02", "analyze": false, "title": "Title Page", "reason": "front matter"},
+    {"id": "fm03", "analyze": false, "title": "Copyright", "reason": "front matter"},
+    {"id": "fm04", "analyze": false, "title": "Acknowledgments", "reason": "front matter"},
+    {"id": "fm05", "analyze": false, "title": "Contents", "reason": "front matter"},
+    {"id": "ch01", "analyze": true, "title": "Introduction"},
+    {"id": "ch02", "analyze": true, "title": "Foreword (Ben Horowitz)"},
+    {"id": "ch03", "analyze": true, "title": "Chapter 1: The Basics of Production: Delivering a Breakfast"},
+    {"id": "ch04", "analyze": true, "title": "Chapter 2: Managing the Breakfast Factory"},
+    {"id": "ch05", "analyze": true, "title": "Chapter 3: Managerial Leverage"},
+    {"id": "ch06", "analyze": true, "title": "Chapter 4: Meetings—The Medium of Managerial Work"},
+    {"id": "ch07", "analyze": true, "title": "Chapter 5: Decisions, Decisions"},
+    {"id": "ch08", "analyze": true, "title": "Chapter 6: Planning: Today's Actions for Tomorrow's Output"},
+    {"id": "ch09", "analyze": true, "title": "Chapter 7: The Breakfast Factory Goes National"},
+    {"id": "ch10", "analyze": true, "title": "Chapter 8: Hybrid Organizations"},
+    {"id": "ch11", "analyze": true, "title": "Chapter 9: Dual Reporting"},
+    {"id": "ch12", "analyze": true, "title": "Chapter 10: Modes of Control"},
+    {"id": "ch13", "analyze": true, "title": "Chapter 11: The Sports Analogy"},
+    {"id": "ch14", "analyze": true, "title": "Chapter 12: Task-Relevant Maturity"},
+    {"id": "ch15", "analyze": true, "title": "Chapter 13: Performance Appraisal: Manager as Judge and Jury"},
+    {"id": "ch16", "analyze": true, "title": "Chapter 14: Two Difficult Tasks"},
+    {"id": "ch17", "analyze": true, "title": "Chapter 15: Compensation as Task-Relevant Feedback"},
+    {"id": "ch18", "analyze": true, "title": "Chapter 16: Why Training Is the Boss's Job"},
+    {"id": "ch19", "analyze": true, "title": "One More Thing…"},
+    {"id": "bm01", "analyze": false, "title": "Notes", "reason": "back matter"}
+  ]
+}

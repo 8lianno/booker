@@ -1,0 +1,46 @@
+{
+  "slug": "high-output-management",
+  "title": "High Output Management",
+  "authors": [
+    "Andrew S. Grove"
+  ],
+  "created": "2026-07-17T09:00:28+00:00",
+  "source_epub": "/Users/ali/Calibre Library/Andrew S. Grove/High Output Management (134)/High Output Management - Andrew S. Grove.epub",
+  "resolution": {
+    "method": "title",
+    "query": "high output management",
+    "match": {
+      "path": "/Users/ali/Calibre Library/Andrew S. Grove/High Output Management (134)/High Output Management - Andrew S. Grove.epub",
+      "title": "High Output Management",
+      "author": "Andrew S. Grove",
+      "score": 1.0,
+      "calibre_id": 134
+    }
+  },
+  "extraction": {
+    "file": "source/book.epub",
+    "sha256": "aefadc7724086c2e4c2727f7ff92f0672cd2b59c4250b926323cff92cbc60c29",
+    "toc": "ncx",
+    "method": "stdlib",
+    "structure": "toc"
+  },
+  "epub_sha256": "aefadc7724086c2e4c2727f7ff92f0672cd2b59c4250b926323cff92cbc60c29",
+  "book_json_sha256": "dcfba2c4fb144b17946a9fec58f7fb79755a35cf0e4e96ffba25753d8eaf8d0b",
+  "calibre": {
+    "calibre_id": 134,
+    "pubdate": "2015-11-18T08:30:00+03:30",
+    "tags": []
+  },
+  "render": {
+    "dossier_sha256": "cadcfdf7b67deee0aeb68f71b55e476627fe9f9aeecdde7de9ab66f0c91b258c",
+    "rendered": "2026-07-17T10:38:56+00:00",
+    "html": true,
+    "pdf": true,
+    "epub": true,
+    "status": {
+      "html": "html_ok_pandoc",
+      "pdf": "pdf_ok_weasyprint",
+      "epub": "epub_ok_pandoc"
+    }
+  }
+}
