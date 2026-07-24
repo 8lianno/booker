@@ -126,7 +126,8 @@ def _book_entry(bd):
 
     files = {}
     for key, name in (("md", "dossier.md"), ("html", "dossier.html"),
-                      ("pdf", "dossier.pdf"), ("epub", "dossier.epub")):
+                      ("pdf", "dossier.pdf"), ("epub", "dossier.epub"),
+                      ("slides", "presentation.html")):
         if (bd / name).exists():
             files[key] = "books/%s/%s" % (slug, name)
 

@@ -94,3 +94,12 @@ flowchart TD
 <div align="center">
   <sub>Built for precision reading and narrative extraction.</sub>
 </div>
+
+<!-- BOOKER:INDEX -->
+| Title | Author | Date | Words | Score / Badge | Links |
+|---|---|---|---|---|---|
+| Dopamine Nation: Finding Balance in the Age of Indulgence | Anna Lembke | 2026-07-17 | – | stage 2 (packets) | – |
+| High Output Management | Andrew S. Grove | 2026-07-23 | 14,020 | stage 4 (verify) | [epub](books/high-output-management/dossier.epub) · [html](books/high-output-management/dossier.html) · [md](books/high-output-management/dossier.md) · [pdf](books/high-output-management/dossier.pdf) · [slides](books/high-output-management/presentation.html) |
+| The Count of Monte Cristo | Alexandre Dumas | 2026-07-23 | 54,310 | stage 1 (skeleton) | [epub](books/the-count-of-monte-cristo/dossier.epub) · [html](books/the-count-of-monte-cristo/dossier.html) · [md](books/the-count-of-monte-cristo/dossier.md) · [pdf](books/the-count-of-monte-cristo/dossier.pdf) |
+| The Great Gatsby | F. Scott Fitzgerald | 2026-07-23 | 163 | stage 0 (init/extract) | [epub](books/the-great-gatsby/dossier.epub) · [html](books/the-great-gatsby/dossier.html) · [md](books/the-great-gatsby/dossier.md) |
+<!-- /BOOKER:INDEX -->

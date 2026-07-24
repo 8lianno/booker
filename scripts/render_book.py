@@ -161,6 +161,32 @@ def _ref_sup(content):
     tip = html_mod.escape(re.sub(r"\s+", " ", content).strip(), quote=True)
     return '<sup class="ref" title="%s">°</sup>' % tip
 
+def paginate_for_revealjs(text: str, target_slides: int = 100) -> str:
+    """Split long sections by injecting `---` every N words to reach ~target_slides."""
+    words_total = len(text.split())
+    words_per_slide = max(30, words_total // target_slides)
+    
+    out = []
+    current_words = 0
+    in_fence = False
+    
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("```") or stripped.startswith("~~~"):
+            in_fence = not in_fence
+            
+        out.append(line)
+        
+        # Only break on empty lines (paragraph boundaries) outside code blocks
+        if not in_fence and not stripped and current_words >= words_per_slide:
+            out.append("---")
+            out.append("")
+            current_words = 0
+        else:
+            current_words += len(stripped.split())
+            
+    return "\n".join(out) + "\n"
+
 
 def transform_markdown(text):
     """Replace inline anchors with superscript reference markers.
@@ -280,5 +306,24 @@ def render(book_dir, title, authors=None, skip_pdf=False, pdf_timeout=300):
                               else "epub_failed_pandoc")
         else:
             status["epub"] = "epub_skipped_no_pandoc"
+
+        # ---- REVEAL.JS (Presentation) --------------------------------------
+        presentation_path = book_dir / "presentation.html"
+        if have_pandoc:
+            slides_text = paginate_for_revealjs(transformed, target_slides=100)
+            pslides = tmp / "slides.md"
+            pslides.write_text(slides_text, encoding="utf-8")
+            
+            cmd = ["pandoc", str(pslides), "-t", "revealjs", "-s",
+                   "-o", str(presentation_path),
+                   "-V", "revealjs-url=../../assets/reveal.js",
+                   "-V", "theme=moon",
+                   "--metadata", "title=%s — Presentation" % title]
+            r = _run(cmd, timeout=pdf_timeout)
+            if r.returncode != 0:
+                print(f"Pandoc REVEALJS failed! stderr: {r.stderr}")
+            status["presentation"] = ("presentation_ok_pandoc" if r.returncode == 0 and presentation_path.exists() else "presentation_failed_pandoc")
+        else:
+            status["presentation"] = "presentation_skipped_no_pandoc"
 
     return status

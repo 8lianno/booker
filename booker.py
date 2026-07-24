@@ -203,7 +203,7 @@ def cmd_render(args):
     status = render_book.render(bd, meta.get("title") or args.slug,
                                 authors=meta.get("authors") or [],
                                 skip_pdf=args.skip_pdf, pdf_timeout=args.pdf_timeout)
-    for key in ("html", "pdf", "epub"):
+    for key in ("html", "pdf", "epub", "presentation"):
         print("%s_status=%s" % (key, status[key]))
     if not (bd / "dossier.html").exists():
         _fail("renderer failed: %s" % status["html"])
@@ -213,6 +213,7 @@ def cmd_render(args):
         "html": (bd / "dossier.html").exists(),
         "pdf": (bd / "dossier.pdf").exists(),
         "epub": (bd / "dossier.epub").exists(),
+        "presentation": (bd / "presentation.html").exists(),
         "status": status,
     }
     util.save_json(bd / "meta.json", meta)
@@ -221,6 +222,8 @@ def cmd_render(args):
         made.append("dossier.pdf")
     if meta["render"]["epub"]:
         made.append("dossier.epub")
+    if meta["render"]["presentation"]:
+        made.append("presentation.html")
     print("rendered: %s" % " + ".join(made))
 
 
