@@ -54,26 +54,37 @@ Dossiers are saved in the `books/<slug>/` directory. A complete synthesis produc
 
 ---
 
-## 📚 Library Index
 
-<!-- BOOKER:INDEX -->
-| Title | Author | Date | Words | Score / Badge | Links |
-|---|---|---|---|---|---|
-| Dopamine Nation: Finding Balance in the Age of Indulgence | Anna Lembke | 2026-07-17 | – | stage 2 (packets) | – |
-| High Output Management | Andrew S. Grove | 2026-07-23 | 14,020 | stage 4 (verify) | [epub](books/high-output-management/dossier.epub) · [html](books/high-output-management/dossier.html) · [md](books/high-output-management/dossier.md) · [pdf](books/high-output-management/dossier.pdf) |
-| The Count of Monte Cristo | Alexandre Dumas | 2026-07-23 | 54,310 | stage 1 (skeleton) | [epub](books/the-count-of-monte-cristo/dossier.epub) · [html](books/the-count-of-monte-cristo/dossier.html) · [md](books/the-count-of-monte-cristo/dossier.md) · [pdf](books/the-count-of-monte-cristo/dossier.pdf) |
-| The Great Gatsby | F. Scott Fitzgerald | 2026-07-23 | 163 | stage 0 (init/extract) | [epub](books/the-great-gatsby/dossier.epub) · [html](books/the-great-gatsby/dossier.html) · [md](books/the-great-gatsby/dossier.md) |
-<!-- /BOOKER:INDEX -->
 
----
+## ⚙️ How It Works (The Pipeline)
 
-## ⚙️ Architecture
+```mermaid
+flowchart TD
+    %% Node Styles
+    classDef input fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef process fill:#475569,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef ai fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef output fill:#8b5cf6,stroke:#fff,stroke-width:2px,color:#fff;
 
-1. **EPUB Ingestion:** Raw EPUB is parsed into structured, numbered paragraphs (`ch001`, `fm01`).
-2. **NotebookLM Batching:** Chapter journeys are queried in chunks of 15 to bypass API timeouts.
-3. **Engine Synthesis:** Based on `genre`, either the Fiction or Non-Fiction synthesizer builds a multi-section narrative framework.
-4. **Deterministic Verification:** Coverage and anchors are audited, generating a final badge score.
-5. **Rendering Pipeline:** Pandoc and WeasyPrint transform the sanitized markdown into highly styled outputs. 
+    A([📚 1. Input Book]) :::input --> B(✂️ 2. Extract & Chunk) :::process
+    B -->|Send Text Chunks| C{🤖 3. NotebookLM AI} :::ai
+    
+    C -.->|If Fiction| D[Plot, Characters & Lore] :::ai
+    C -.->|If Non-Fiction| E[Mental Models & Tactics] :::ai
+    
+    D --> F(📝 4. Build Master Dossier) :::process
+    E --> F
+    
+    F --> G(🔎 5. Verify & Score) :::process
+    G -->|Generate Files| H([✨ 6. Final EPUB / PDF / HTML]) :::output
+```
+
+1. **Input**: You provide a raw EPUB book.
+2. **Extract & Chunk**: Booker breaks the book down into small, numbered chapters to make it easy for the AI to digest.
+3. **AI Analysis**: The text is sent to NotebookLM in small batches. The AI reads the book and extracts the most important information depending on whether it's Fiction or Non-Fiction.
+4. **Build Master Dossier**: All the extracted insights are combined into one massive, highly organized Markdown document.
+5. **Verify & Score**: Booker audits the dossier to ensure everything is accurate and anchored to the source text, giving it a quality badge score.
+6. **Final Export**: The raw text is beautifully formatted into EPUB, PDF, and HTML files for you to read anywhere!
 
 <div align="center">
   <sub>Built for precision reading and narrative extraction.</sub>
