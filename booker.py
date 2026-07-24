@@ -231,6 +231,44 @@ def cmd_index(args):
           % len(catalog.get("books", [])))
 
 
+def cmd_nlm_setup(args):
+    import notebooklm_adapter
+    bd = util.book_dir(args.slug)
+    meta = util.load_json(bd / "meta.json") if (bd / "meta.json").exists() else {}
+    title = meta.get("title") or args.slug
+    text_dir = bd / "text"
+    if not text_dir.exists():
+        _fail("No text/ directory found for %s. Run 'booker new' first." % args.slug)
+    result = notebooklm_adapter.setup_book_notebook(args.slug, title, text_dir)
+    meta["notebooklm"] = {
+        "notebook_id": result["notebook_id"],
+        "url": result["url"],
+        "sources_count": result["sources_count"],
+    }
+    util.save_json(bd / "meta.json", meta)
+    print("NotebookLM setup complete! Notebook URL: %s" % result["url"])
+
+
+def cmd_nlm_synthesize(args):
+    import narrative_synthesizer
+    bd = util.book_dir(args.slug)
+    meta = util.load_json(bd / "meta.json") if (bd / "meta.json").exists() else {}
+    nb_id = meta.get("notebooklm", {}).get("notebook_id")
+    out_file = narrative_synthesizer.synthesize_dossier(args.slug, genre=args.genre, notebook_id=nb_id)
+    print("Dossier synthesized: %s" % out_file)
+
+
+def cmd_nlm_audio(args):
+    import notebooklm_adapter
+    bd = util.book_dir(args.slug)
+    meta = util.load_json(bd / "meta.json") if (bd / "meta.json").exists() else {}
+    nb_id = meta.get("notebooklm", {}).get("notebook_id")
+    if not nb_id:
+        _fail("NotebookLM not set up for %s. Run 'booker nlm-setup' first." % args.slug)
+    res = notebooklm_adapter.create_audio_podcast(nb_id)
+    print("Audio Podcast Generation Result: %s" % res)
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="booker", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -242,6 +280,19 @@ def main(argv=None):
     s.add_argument("--slug", help="override the generated slug")
     s.add_argument("--force", action="store_true", help="re-extract over an existing slug")
     s.set_defaults(fn=cmd_new)
+
+    s = sub.add_parser("nlm-setup", help="create NotebookLM notebook & upload chapter sources")
+    s.add_argument("slug")
+    s.set_defaults(fn=cmd_nlm_setup)
+
+    s = sub.add_parser("nlm-synthesize", help="dual-engine narrative dossier synthesis")
+    s.add_argument("slug")
+    s.add_argument("--genre", choices=["fiction", "non-fiction"], help="override detected genre")
+    s.set_defaults(fn=cmd_nlm_synthesize)
+
+    s = sub.add_parser("nlm-audio", help="generate NotebookLM Deep Dive Audio Podcast")
+    s.add_argument("slug")
+    s.set_defaults(fn=cmd_nlm_audio)
 
     s = sub.add_parser("resolve", help="preview title→EPUB resolution (top 5)")
     s.add_argument("--title", required=True)
@@ -286,3 +337,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
+
