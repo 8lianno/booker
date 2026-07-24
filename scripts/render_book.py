@@ -131,17 +131,19 @@ JS = """
 """
 
 EPUB_CSS = """
-body { text-align: justify; hyphens: auto; -webkit-hyphens: auto; line-height: 1.6; }
-h1, h2, h3 { font-family: sans-serif; line-height: 1.3; text-align: left; hyphens: none; }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body { font-family: 'Roboto', sans-serif; text-align: justify; hyphens: auto; -webkit-hyphens: auto; line-height: 1.6; }
+h1, h2, h3 { font-family: 'Roboto', sans-serif; line-height: 1.3; text-align: left; hyphens: none; }
 h1 { font-size: 1.5em; border-bottom: 2px solid #7a5c2e; padding-bottom: 0.2em; }
 h2 { font-size: 1.2em; }
 p { margin: 0.4em 0; text-indent: 0; }
 blockquote { border-left: 3px solid #7a5c2e; margin-left: 0; padding-left: 0.8em; font-style: italic; }
 sup.ref { font-size: 0.6em; color: #999; }
-div.covers { color: #999; font-size: 0.75em; font-family: sans-serif; }
-table { border-collapse: collapse; width: 100%; font-size: 0.8em; text-align: left; }
-th, td { border: 1px solid #ccc; padding: 0.3em 0.4em; vertical-align: top; }
-th { background: #f0ece4; }
+div.covers { color: #999; font-size: 0.75em; font-family: 'Roboto', sans-serif; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9em; margin: 1.5em 0; text-align: left; page-break-inside: avoid; }
+th, td { border: 1px solid #e0e0e0; padding: 0.7em 1em; vertical-align: top; }
+th { background-color: #f8f9fa; font-weight: bold; border-bottom: 2px solid #7a5c2e; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.05em; }
+tr:nth-child(even) { background-color: #fbfbfb; }
 code { font-size: 0.85em; }
 """
 
@@ -217,7 +219,7 @@ def render(book_dir, title, authors=None, skip_pdf=False, pdf_timeout=300):
         # ---- HTML ----------------------------------------------------------
         if have_pandoc:
             r = _run(["pandoc", str(tmd), "--standalone", "--toc", "--toc-depth=2",
-                      "--from", "markdown+smart", "--to", "html5",
+                      "--from", "markdown+smart-yaml_metadata_block", "--to", "html5",
                       "--metadata", "title=%s" % title,
                       "--metadata", "lang=en",
                       "-o", str(html_path)])
@@ -262,15 +264,18 @@ def render(book_dir, title, authors=None, skip_pdf=False, pdf_timeout=300):
             ecss.write_text(EPUB_CSS, encoding="utf-8")
             split_flag = ("--split-level=1" if _pandoc_supports("--split-level")
                           else "--epub-chapter-level=1")
-            cmd = ["pandoc", str(tmd), "--from", "markdown+smart",
+            cmd = ["pandoc", str(tmd), "--from", "markdown+smart-yaml_metadata_block",
                    "--metadata", "title=%s — Dossier" % title,
                    "--metadata", "lang=en"]
             for a in authors:
                 cmd += ["--metadata", "author=%s" % a]
+                
             cmd += ["--toc", "--toc-depth=1",
                     "--shift-heading-level-by=-1", split_flag,
                     "--css", str(ecss), "-o", str(epub_path)]
             r = _run(cmd, timeout=pdf_timeout)
+            if r.returncode != 0:
+                print(f"Pandoc EPUB failed! stderr: {r.stderr}")
             status["epub"] = ("epub_ok_pandoc" if r.returncode == 0 and epub_path.exists()
                               else "epub_failed_pandoc")
         else:

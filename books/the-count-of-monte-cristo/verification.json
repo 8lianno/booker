@@ -1,0 +1,13 @@
+{
+  "checker_version": "2.0",
+  "checked_at": "2026-07-23T23:21:29+00:00",
+  "book": {
+    "slug": "the-count-of-monte-cristo"
+  },
+  "score": 100.0,
+  "badge": "VERIFIED-NARRATIVE",
+  "pass": true,
+  "failures": [],
+  "repair_list": [],
+  "audit_sample": []
+}

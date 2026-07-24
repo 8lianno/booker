@@ -1,0 +1,535 @@
+{
+  "slug": "dopamine-nation",
+  "title": "Dopamine Nation: Finding Balance in the Age of Indulgence",
+  "authors": [
+    "Anna Lembke"
+  ],
+  "source": {
+    "file": "source/book.epub",
+    "sha256": "f2bb10f14294d9cbb63e245890111c5c6314d481711bb73b5adb0c8e9e4aff10",
+    "toc": "nav",
+    "method": "stdlib",
+    "structure": "toc"
+  },
+  "stats": {
+    "words": 66793,
+    "chapters": 11,
+    "front": 5,
+    "back": 6,
+    "paragraphs": 2498
+  },
+  "chapters": [
+    {
+      "id": "fm01",
+      "index": 1,
+      "title": "Cover",
+      "part": null,
+      "kind": "front",
+      "words": 0,
+      "paragraphs": 0,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm02",
+      "index": 2,
+      "title": "Title Page",
+      "part": null,
+      "kind": "front",
+      "words": 0,
+      "paragraphs": 0,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm03",
+      "index": 3,
+      "title": "Copyright",
+      "part": null,
+      "kind": "front",
+      "words": 329,
+      "paragraphs": 18,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm04",
+      "index": 4,
+      "title": "Dedication",
+      "part": null,
+      "kind": "front",
+      "words": 8,
+      "paragraphs": 1,
+      "oversize": false,
+      "headings": []
+    },
+    {
+      "id": "fm05",
+      "index": 5,
+      "title": "Contents",
+      "part": null,
+      "kind": "front",
+      "words": 75,
+      "paragraphs": 25,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CONTENTS"
+        }
+      ]
+    },
+    {
+      "id": "ch01",
+      "index": 6,
+      "title": "Introduction: The Problem",
+      "part": null,
+      "kind": "chapter",
+      "words": 462,
+      "paragraphs": 13,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "INTRODUCTION"
+        },
+        {
+          "para": 2,
+          "text": "The Problem"
+        }
+      ]
+    },
+    {
+      "id": "ch02",
+      "index": 7,
+      "title": "Chapter 1: Our Masturbation Machines",
+      "part": "Part I: The Pursuit of Pleasure",
+      "kind": "chapter",
+      "words": 6037,
+      "paragraphs": 147,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 1"
+        },
+        {
+          "para": 2,
+          "text": "Our Masturbation Machines"
+        },
+        {
+          "para": 69,
+          "text": "The Dark Side of Capitalism"
+        },
+        {
+          "para": 108,
+          "text": "The Internet and Social Contagion"
+        }
+      ]
+    },
+    {
+      "id": "ch03",
+      "index": 8,
+      "title": "Chapter 2: Running from Pain",
+      "part": "Part I: The Pursuit of Pleasure",
+      "kind": "chapter",
+      "words": 3768,
+      "paragraphs": 93,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 2"
+        },
+        {
+          "para": 2,
+          "text": "Running from Pain"
+        },
+        {
+          "para": 65,
+          "text": "Lack of Self-Care or Mental Illness?"
+        }
+      ]
+    },
+    {
+      "id": "ch04",
+      "index": 9,
+      "title": "Chapter 3: The Pleasure-Pain Balance",
+      "part": "Part I: The Pursuit of Pleasure",
+      "kind": "chapter",
+      "words": 3882,
+      "paragraphs": 88,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 3"
+        },
+        {
+          "para": 2,
+          "text": "The Pleasure-Pain Balance"
+        },
+        {
+          "para": 4,
+          "text": "Dopamine"
+        },
+        {
+          "para": 15,
+          "text": "Pleasure and Pain Are Co-Located"
+        },
+        {
+          "para": 23,
+          "text": "Tolerance (Neuroadaptation)"
+        },
+        {
+          "para": 42,
+          "text": "People, Places, and Things"
+        },
+        {
+          "para": 68,
+          "text": "The Balance Is Only a Metaphor"
+        }
+      ]
+    },
+    {
+      "id": "ch05",
+      "index": 10,
+      "title": "Chapter 4: Dopamine Fasting",
+      "part": "Part II: Self-Binding",
+      "kind": "chapter",
+      "words": 4099,
+      "paragraphs": 121,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 4"
+        },
+        {
+          "para": 2,
+          "text": "Dopamine Fasting"
+        },
+        {
+          "para": 12,
+          "text": "D Stands for Data"
+        },
+        {
+          "para": 18,
+          "text": "O Stands for Objectives"
+        },
+        {
+          "para": 24,
+          "text": "P Stands for Problems"
+        },
+        {
+          "para": 35,
+          "text": "A Stands for Abstinence"
+        },
+        {
+          "para": 70,
+          "text": "M Stands for Mindfulness"
+        },
+        {
+          "para": 89,
+          "text": "I Stands for Insight"
+        },
+        {
+          "para": 101,
+          "text": "N Stands for Next Steps"
+        },
+        {
+          "para": 111,
+          "text": "E Stands for Experiment"
+        }
+      ]
+    },
+    {
+      "id": "ch06",
+      "index": 11,
+      "title": "Chapter 5: Space, Time, and Meaning",
+      "part": "Part II: Self-Binding",
+      "kind": "chapter",
+      "words": 7251,
+      "paragraphs": 169,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 5"
+        },
+        {
+          "para": 2,
+          "text": "Space, Time, and Meaning"
+        },
+        {
+          "para": 27,
+          "text": "Physical Self-Binding"
+        },
+        {
+          "para": 69,
+          "text": "Chronological Self-Binding"
+        },
+        {
+          "para": 121,
+          "text": "Categorical Self-Binding"
+        }
+      ]
+    },
+    {
+      "id": "ch07",
+      "index": 12,
+      "title": "Chapter 6: A Broken Balance?",
+      "part": "Part II: Self-Binding",
+      "kind": "chapter",
+      "words": 4197,
+      "paragraphs": 92,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 6"
+        },
+        {
+          "para": 2,
+          "text": "A Broken Balance?"
+        },
+        {
+          "para": 49,
+          "text": "Medications to Restore a Level Balance?"
+        }
+      ]
+    },
+    {
+      "id": "ch08",
+      "index": 13,
+      "title": "Chapter 7: Pressing on the Pain Side",
+      "part": "Part III: The Pursuit of Pain",
+      "kind": "chapter",
+      "words": 7515,
+      "paragraphs": 169,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 7"
+        },
+        {
+          "para": 2,
+          "text": "Pressing on the Pain Side"
+        },
+        {
+          "para": 45,
+          "text": "The Science of Hormesis"
+        },
+        {
+          "para": 69,
+          "text": "Pain to Treat Pain"
+        },
+        {
+          "para": 112,
+          "text": "Addicted to Pain"
+        },
+        {
+          "para": 151,
+          "text": "Addicted to Work"
+        },
+        {
+          "para": 159,
+          "text": "The Verdict on Pain"
+        }
+      ]
+    },
+    {
+      "id": "ch09",
+      "index": 14,
+      "title": "Chapter 8: Radical Honesty",
+      "part": "Part III: The Pursuit of Pain",
+      "kind": "chapter",
+      "words": 8913,
+      "paragraphs": 188,
+      "oversize": true,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 8"
+        },
+        {
+          "para": 2,
+          "text": "Radical Honesty"
+        },
+        {
+          "para": 30,
+          "text": "Awareness"
+        },
+        {
+          "para": 66,
+          "text": "Honesty Promotes Intimate Human Connections"
+        },
+        {
+          "para": 85,
+          "text": "Truthful Autobiographies Create Accountability"
+        },
+        {
+          "para": 116,
+          "text": "Truth-telling Is Contagious . . . and So Is Lying"
+        },
+        {
+          "para": 137,
+          "text": "Truth-telling as Prevention"
+        }
+      ]
+    },
+    {
+      "id": "ch10",
+      "index": 15,
+      "title": "Chapter 9: Prosocial Shame",
+      "part": "Part III: The Pursuit of Pain",
+      "kind": "chapter",
+      "words": 5625,
+      "paragraphs": 118,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CHAPTER 9"
+        },
+        {
+          "para": 2,
+          "text": "Prosocial Shame"
+        },
+        {
+          "para": 10,
+          "text": "Destructive Shame"
+        },
+        {
+          "para": 53,
+          "text": "AA as a Model for Prosocial Shame"
+        },
+        {
+          "para": 89,
+          "text": "Prosocial Shame and Parenting"
+        }
+      ]
+    },
+    {
+      "id": "ch11",
+      "index": 16,
+      "title": "Conclusion: Lessons of the Balance",
+      "part": null,
+      "kind": "chapter",
+      "words": 951,
+      "paragraphs": 29,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "CONCLUSION"
+        },
+        {
+          "para": 2,
+          "text": "Lessons of the Balance"
+        }
+      ]
+    },
+    {
+      "id": "bm01",
+      "index": 17,
+      "title": "Author’s Note",
+      "part": null,
+      "kind": "back",
+      "words": 96,
+      "paragraphs": 2,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Author’s Note"
+        }
+      ]
+    },
+    {
+      "id": "bm02",
+      "index": 18,
+      "title": "Notes",
+      "part": null,
+      "kind": "back",
+      "words": 5358,
+      "paragraphs": 148,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Notes"
+        }
+      ]
+    },
+    {
+      "id": "bm03",
+      "index": 19,
+      "title": "Bibliography",
+      "part": null,
+      "kind": "back",
+      "words": 3972,
+      "paragraphs": 151,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Bibliography"
+        }
+      ]
+    },
+    {
+      "id": "bm04",
+      "index": 20,
+      "title": "Acknowledgments",
+      "part": null,
+      "kind": "back",
+      "words": 186,
+      "paragraphs": 6,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "Acknowledgments"
+        }
+      ]
+    },
+    {
+      "id": "bm05",
+      "index": 21,
+      "title": "Index",
+      "part": null,
+      "kind": "back",
+      "words": 3894,
+      "paragraphs": 914,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 2,
+          "text": "Index"
+        }
+      ]
+    },
+    {
+      "id": "bm06",
+      "index": 22,
+      "title": "About the Author",
+      "part": null,
+      "kind": "back",
+      "words": 175,
+      "paragraphs": 6,
+      "oversize": false,
+      "headings": [
+        {
+          "para": 1,
+          "text": "About the Author"
+        },
+        {
+          "para": 3,
+          "text": "What’s next on your reading list?"
+        }
+      ]
+    }
+  ]
+}

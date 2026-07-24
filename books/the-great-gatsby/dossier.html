@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>The Great Gatsby</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+:root { --ink: #1c1c1c; --muted: #8a8a8a; --line: #e3ddd3; --accent: #7a5c2e; }
+html { scroll-behavior: smooth; }
+body {
+  max-width: 760px; margin: 56px auto; padding: 0 32px;
+  color: var(--ink);
+  font-family: Charter, "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-size: 17px; line-height: 1.7;
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+  text-rendering: optimizeLegibility; font-kerning: normal;
+}
+h1, h2, h3, h4 {
+  font-family: "Avenir Next", Avenir, "Segoe UI", -apple-system, sans-serif;
+  line-height: 1.28; text-align: left; hyphens: none; letter-spacing: -0.01em;
+}
+header#title-block-header { margin-bottom: 2.2rem; }
+h1.title { font-size: 1.9rem; border-bottom: 3px double var(--accent); padding-bottom: .4rem; }
+h1 { font-size: 1.75rem; margin-top: 2.2em; }
+h2 { font-size: 1.4rem; margin-top: 2.1em; border-bottom: 1px solid var(--line); padding-bottom: .3rem; }
+h3 { font-size: 1.12rem; margin-top: 1.7em; color: #2e2a24; }
+p { margin: 0.75em 0; }
+strong { color: #000; }
+blockquote { border-left: 3px solid var(--accent); margin-left: 0; padding-left: 1rem; color: #504a41; font-style: italic; }
+code { background: #f5f2ec; padding: .08rem .3rem; border-radius: 4px; font-size: .82em; }
+pre { background: #f7f5f0; border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1rem; overflow-x: auto; line-height: 1.45; text-align: left; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: .86em; line-height: 1.45; text-align: left; hyphens: none; }
+th, td { border: 1px solid var(--line); padding: .45rem .6rem; vertical-align: top; }
+th { background: #f4f0e8; font-family: "Avenir Next", Avenir, sans-serif; font-size: .92em; }
+tr:nth-child(even) td { background: #fbfaf7; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem auto; width: 40%; }
+nav#TOC {
+  background: #faf8f3; border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem 1.6rem; margin: 2rem 0 3rem; font-size: .9em; text-align: left;
+  font-family: "Avenir Next", Avenir, sans-serif; column-count: 2; column-gap: 2rem;
+}
+nav#TOC::before { content: "Contents"; font-weight: 600; display: block; margin-bottom: .5rem; }
+nav#TOC ul { margin: 0; padding-left: 1.1rem; list-style: none; }
+nav#TOC a { color: var(--ink); text-decoration: none; }
+nav#TOC a:hover { color: var(--accent); }
+a { color: var(--accent); }
+
+/* --- source references ------------------------------------------------ */
+sup.ref {
+  color: var(--muted); font-size: .62em; line-height: 0; cursor: help;
+  padding: 0 .06em; user-select: none;
+}
+sup.ref:hover { color: var(--accent); }
+body[data-refs="hidden"] sup.ref { display: none; }
+body[data-refs="full"] sup.ref::after {
+  content: " " attr(title);
+  font-size: .85em; color: var(--muted); font-family: ui-monospace, Menlo, monospace;
+  letter-spacing: -0.02em;
+}
+div.covers {
+  color: var(--muted); font-size: .78em; margin: -0.4em 0 1em;
+  font-family: "Avenir Next", Avenir, sans-serif; text-align: left;
+}
+#reftoggle {
+  position: fixed; top: 14px; right: 14px; z-index: 10;
+  font: 12px "Avenir Next", Avenir, sans-serif; color: #5c5648;
+  background: #faf8f3; border: 1px solid var(--line); border-radius: 999px;
+  padding: .35rem .8rem; cursor: pointer;
+}
+#reftoggle:hover { border-color: var(--accent); color: var(--accent); }
+details { margin: .6em 0; }
+details summary { cursor: pointer; color: var(--accent); }
+
+/* --- print / PDF ------------------------------------------------------- */
+@page {
+  margin: 20mm 17mm;
+  @bottom-center { content: counter(page); font-size: 9px; color: #999; }
+}
+@media print {
+  body { max-width: none; margin: 0; padding: 0; font-size: 10.4pt; }
+  #reftoggle { display: none; }
+  sup.ref { font-size: .58em; color: #b0a89a; }
+  nav#TOC { column-count: 2; }
+  h1, h2 { page-break-after: avoid; break-after: avoid-page; }
+  h2 { page-break-before: page; break-before: page; }
+  nav#TOC + * , header#title-block-header + * { page-break-before: avoid; }
+  table, blockquote, pre { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Great Gatsby</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#the-great-gatsby-ultimate-analytical-dossier"
+id="toc-the-great-gatsby-ultimate-analytical-dossier">The Great Gatsby —
+Ultimate Analytical Dossier</a>
+<ul>
+<li><a href="#source-note-and-overview"
+id="toc-source-note-and-overview">0. Source Note And Overview</a></li>
+<li><a href="#executive-orientation-narrative-premise"
+id="toc-executive-orientation-narrative-premise">1. Executive
+Orientation &amp; Narrative Premise</a></li>
+<li><a href="#plot-mechanics-act-structure-turning-points-matrix"
+id="toc-plot-mechanics-act-structure-turning-points-matrix">2. Plot
+Mechanics, Act Structure &amp; Turning Points Matrix</a></li>
+<li><a href="#character-transformation-arc-matrix"
+id="toc-character-transformation-arc-matrix">3. Character Transformation
+&amp; Arc Matrix</a></li>
+<li><a href="#worldbuilding-lore-setting-dynamics"
+id="toc-worldbuilding-lore-setting-dynamics">4. Worldbuilding, Lore
+&amp; Setting Dynamics</a></li>
+<li><a href="#symbolic-motifs-themes-subtext-system"
+id="toc-symbolic-motifs-themes-subtext-system">5. Symbolic Motifs,
+Themes &amp; Subtext System</a></li>
+<li><a href="#chapter-by-chapter-narrative-journey"
+id="toc-chapter-by-chapter-narrative-journey">6. Chapter-by-Chapter
+Narrative Journey</a></li>
+<li><a href="#pacing-narrative-perspective-craft-analysis"
+id="toc-pacing-narrative-perspective-craft-analysis">7. Pacing,
+Narrative Perspective &amp; Craft Analysis</a></li>
+<li><a href="#critical-subtext-literary-impact"
+id="toc-critical-subtext-literary-impact">8. Critical Subtext &amp;
+Literary Impact</a></li>
+<li><a href="#memory-hooks-characterplot-recall-bank"
+id="toc-memory-hooks-characterplot-recall-bank">9. Memory Hooks &amp;
+Character/Plot Recall Bank</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="the-great-gatsby-ultimate-analytical-dossier">The Great Gatsby —
+Ultimate Analytical Dossier</h1>
+<p><strong>Author(s):</strong> F. Scott Fitzgerald |
+<strong>Engine:</strong> FICTION | <strong>Slug:</strong>
+<code>the-great-gatsby</code></p>
+<h2 id="source-note-and-overview">0. Source Note And Overview</h2>
+<p>This dossier was generated via Ultimate Booker (fiction engine). It
+synthesizes executive concepts, chapter-by-chapter progression, and
+recall banks.</p>
+<h2 id="executive-orientation-narrative-premise">1. Executive
+Orientation &amp; Narrative Premise</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="plot-mechanics-act-structure-turning-points-matrix">2. Plot
+Mechanics, Act Structure &amp; Turning Points Matrix</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="character-transformation-arc-matrix">3. Character Transformation
+&amp; Arc Matrix</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="worldbuilding-lore-setting-dynamics">4. Worldbuilding, Lore
+&amp; Setting Dynamics</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="symbolic-motifs-themes-subtext-system">5. Symbolic Motifs,
+Themes &amp; Subtext System</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="chapter-by-chapter-narrative-journey">6. Chapter-by-Chapter
+Narrative Journey</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="pacing-narrative-perspective-craft-analysis">7. Pacing,
+Narrative Perspective &amp; Craft Analysis</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="critical-subtext-literary-impact">8. Critical Subtext &amp;
+Literary Impact</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<h2 id="memory-hooks-characterplot-recall-bank">9. Memory Hooks &amp;
+Character/Plot Recall Bank</h2>
+<p><em>Synthesis details extracted from source text.</em></p>
+<script>
+(function () {
+  var modes = ["markers", "full", "hidden"];
+  var labels = {markers: "refs: markers", full: "refs: full", hidden: "refs: hidden"};
+  var body = document.body;
+  var btn = document.createElement("button");
+  btn.id = "reftoggle";
+  var mode = localStorage.getItem("booker-refs") || "markers";
+  function apply(m) { body.setAttribute("data-refs", m); btn.textContent = labels[m]; }
+  apply(mode);
+  btn.addEventListener("click", function () {
+    mode = modes[(modes.indexOf(mode) + 1) % modes.length];
+    localStorage.setItem("booker-refs", mode);
+    apply(mode);
+  });
+  body.appendChild(btn);
+})();
+</script>
+</body>
+</html>

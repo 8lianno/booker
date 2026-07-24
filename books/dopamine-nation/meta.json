@@ -1,0 +1,27 @@
+{
+  "slug": "dopamine-nation",
+  "title": "Dopamine Nation: Finding Balance in the Age of Indulgence",
+  "authors": [
+    "Anna Lembke"
+  ],
+  "created": "2026-07-17T11:20:07+00:00",
+  "source_epub": "/Users/ali/Downloads/Dopamine Nation Finding Balance in the Age of Indulgence (Anna Lembke) (z-library.sk, 1lib.sk, z-lib.sk) (1).epub",
+  "resolution": {
+    "method": "path",
+    "query": "/Users/ali/Downloads/Dopamine Nation Finding Balance in the Age of Indulgence (Anna Lembke) (z-library.sk, 1lib.sk, z-lib.sk) (1).epub"
+  },
+  "extraction": {
+    "file": "source/book.epub",
+    "sha256": "f2bb10f14294d9cbb63e245890111c5c6314d481711bb73b5adb0c8e9e4aff10",
+    "toc": "nav",
+    "method": "stdlib",
+    "structure": "toc"
+  },
+  "epub_sha256": "f2bb10f14294d9cbb63e245890111c5c6314d481711bb73b5adb0c8e9e4aff10",
+  "book_json_sha256": "785b753f2e3b94df6981000d400a7f8e777da8fbde41896a3a358ed96374c32a",
+  "calibre": {
+    "calibre_id": 23,
+    "pubdate": "2021-08-24T03:30:00+03:30",
+    "tags": []
+  }
+}

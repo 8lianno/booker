@@ -1,0 +1,21 @@
+{
+  "slug": "the-great-gatsby",
+  "title": "The Great Gatsby",
+  "authors": [
+    "F. Scott Fitzgerald"
+  ],
+  "genre": "Classic Fiction",
+  "created": "2026-07-23T23:30:00Z",
+  "render": {
+    "dossier_sha256": "ec19753e1f373dea4a25dffaf68e6efa0d7bcf2e306ea2b631c3c421e260cc59",
+    "rendered": "2026-07-23T19:59:13+00:00",
+    "html": true,
+    "pdf": false,
+    "epub": true,
+    "status": {
+      "html": "html_ok_pandoc",
+      "pdf": "pdf_skipped",
+      "epub": "epub_ok_pandoc"
+    }
+  }
+}

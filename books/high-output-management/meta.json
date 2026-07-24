@@ -32,8 +32,8 @@
     "tags": []
   },
   "render": {
-    "dossier_sha256": "cadcfdf7b67deee0aeb68f71b55e476627fe9f9aeecdde7de9ab66f0c91b258c",
-    "rendered": "2026-07-17T10:38:56+00:00",
+    "dossier_sha256": "e2a1aefb6dabf21c5ac61f8c458dfc2518ff0a5d4d166cfd7f1b6f70dde59b2d",
+    "rendered": "2026-07-23T22:52:15+00:00",
     "html": true,
     "pdf": true,
     "epub": true,
@@ -42,5 +42,10 @@
       "pdf": "pdf_ok_weasyprint",
       "epub": "epub_ok_pandoc"
     }
+  },
+  "notebooklm": {
+    "notebook_id": "f8696851-434b-4baf-9b22-fd7b6d3b27be",
+    "url": "https://notebooklm.google.com/notebook/f8696851-434b-4baf-9b22-fd7b6d3b27be",
+    "sources_count": 25
   }
 }

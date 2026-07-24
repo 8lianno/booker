@@ -1,0 +1,27 @@
+{
+  "book_json_sha256_12": "785b753f2e3b",
+  "chapters": [
+    {"id": "fm01", "analyze": false, "title": "Cover", "reason": "front matter"},
+    {"id": "fm02", "analyze": false, "title": "Title Page", "reason": "front matter"},
+    {"id": "fm03", "analyze": false, "title": "Copyright", "reason": "front matter"},
+    {"id": "fm04", "analyze": false, "title": "Dedication", "reason": "front matter"},
+    {"id": "fm05", "analyze": false, "title": "Contents", "reason": "front matter"},
+    {"id": "ch01", "analyze": true, "title": "Introduction: The Problem"},
+    {"id": "ch02", "analyze": true, "title": "Chapter 1: Our Masturbation Machines"},
+    {"id": "ch03", "analyze": true, "title": "Chapter 2: Running from Pain"},
+    {"id": "ch04", "analyze": true, "title": "Chapter 3: The Pleasure-Pain Balance"},
+    {"id": "ch05", "analyze": true, "title": "Chapter 4: Dopamine Fasting"},
+    {"id": "ch06", "analyze": true, "title": "Chapter 5: Space, Time, and Meaning"},
+    {"id": "ch07", "analyze": true, "title": "Chapter 6: A Broken Balance?"},
+    {"id": "ch08", "analyze": true, "title": "Chapter 7: Pressing on the Pain Side"},
+    {"id": "ch09", "analyze": true, "title": "Chapter 8: Radical Honesty"},
+    {"id": "ch10", "analyze": true, "title": "Chapter 9: Prosocial Shame"},
+    {"id": "ch11", "analyze": true, "title": "Conclusion: Lessons of the Balance"},
+    {"id": "bm01", "analyze": false, "title": "Author's Note", "reason": "back matter"},
+    {"id": "bm02", "analyze": false, "title": "Notes", "reason": "back matter"},
+    {"id": "bm03", "analyze": false, "title": "Bibliography", "reason": "back matter"},
+    {"id": "bm04", "analyze": false, "title": "Acknowledgments", "reason": "back matter"},
+    {"id": "bm05", "analyze": false, "title": "Index", "reason": "back matter"},
+    {"id": "bm06", "analyze": false, "title": "About the Author", "reason": "back matter"}
+  ]
+}
