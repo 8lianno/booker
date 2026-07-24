@@ -1,5 +1,28 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# OS
 .DS_Store
-books/*.bak-*/
-books/*/source/
+Thumbs.db
+
+# Secrets & Configs
+*secret*
+*token*
+credentials.json
+auth.json
+
+# Booker Generated Output & Artifacts
+books/
+catalog.json
+index.html
+visuals.json
+scratch_*.txt
+*.log
