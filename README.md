@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="assets/logo.svg" alt="Booker Logo" width="250" />
   <h1>📚 Booker</h1>
   <p><b>Automated Literary Intelligence & Narrative Forensics</b></p>
   

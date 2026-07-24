@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bookerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(100, 20)">
+    <!-- Book Left Side -->
+    <path d="M 100 140 Q 60 120 10 140 L 10 40 Q 60 20 100 50 Z" 
+          fill="none" stroke="url(#bookerGrad)" stroke-width="12" stroke-linejoin="round" />
+    
+    <!-- Book Right Side -->
+    <path d="M 100 140 Q 140 120 190 140 L 190 40 Q 140 20 100 50 Z" 
+          fill="none" stroke="url(#bookerGrad)" stroke-width="12" stroke-linejoin="round" />
+
+    <!-- Center Spine -->
+    <line x1="100" y1="50" x2="100" y2="140" 
+          stroke="url(#bookerGrad)" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Data Nodes (Intelligence Extractor) -->
+    <circle cx="100" cy="20" r="8" fill="url(#glowGrad)" />
+    <line x1="100" y1="50" x2="100" y2="28" stroke="url(#glowGrad)" stroke-width="4" stroke-dasharray="6,4" />
+
+    <circle cx="45" cy="45" r="5" fill="url(#glowGrad)" />
+    <line x1="45" y1="75" x2="45" y2="50" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="4,4" />
+
+    <circle cx="155" cy="45" r="5" fill="url(#glowGrad)" />
+    <line x1="155" y1="75" x2="155" y2="50" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="4,4" />
+  </g>
+</svg>
