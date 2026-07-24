@@ -1,36 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
   <defs>
-    <linearGradient id="bookerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284c7" />
-      <stop offset="100%" stop-color="#3b82f6" />
+    <!-- Gradients -->
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
     </linearGradient>
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#2563eb" />
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7f00ff"/>
+      <stop offset="100%" stop-color="#e100ff"/>
     </linearGradient>
+
+    <!-- Glowing Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
-  <g transform="translate(100, 20)">
-    <!-- Book Left Side -->
-    <path d="M 100 140 Q 60 120 10 140 L 10 40 Q 60 20 100 50 Z" 
-          fill="none" stroke="url(#bookerGrad)" stroke-width="12" stroke-linejoin="round" />
+  <g transform="translate(250, 170)">
+    <!-- Isometric Geometric Book / Data Matrix -->
     
-    <!-- Book Right Side -->
-    <path d="M 100 140 Q 140 120 190 140 L 190 40 Q 140 20 100 50 Z" 
-          fill="none" stroke="url(#bookerGrad)" stroke-width="12" stroke-linejoin="round" />
+    <!-- Base Layer (Dark shadow/wireframe) -->
+    <polygon points="0,70 120,10 120,-30 0,30" fill="none" stroke="url(#purpleGlow)" stroke-width="2" opacity="0.5" />
+    <polygon points="0,70 -120,10 -120,-30 0,30" fill="none" stroke="url(#purpleGlow)" stroke-width="2" opacity="0.5" />
+    
+    <!-- Wireframe connect lines -->
+    <line x1="0" y1="70" x2="0" y2="30" stroke="url(#purpleGlow)" stroke-width="2" opacity="0.5"/>
 
-    <!-- Center Spine -->
-    <line x1="100" y1="50" x2="100" y2="140" 
-          stroke="url(#bookerGrad)" stroke-width="12" stroke-linecap="round" />
+    <!-- Mid Page Layer -->
+    <polygon points="0,50 110,0 110,-40 0,10" fill="rgba(79, 172, 254, 0.05)" stroke="url(#neonBlue)" stroke-width="2" opacity="0.7"/>
+    <polygon points="0,50 -110,0 -110,-40 0,10" fill="rgba(79, 172, 254, 0.05)" stroke="url(#neonBlue)" stroke-width="2" opacity="0.7"/>
 
-    <!-- Data Nodes (Intelligence Extractor) -->
-    <circle cx="100" cy="20" r="8" fill="url(#glowGrad)" />
-    <line x1="100" y1="50" x2="100" y2="28" stroke="url(#glowGrad)" stroke-width="4" stroke-dasharray="6,4" />
+    <!-- Top Glowing Page Layer -->
+    <polygon points="0,30 100,-10 100,-50 0,-10" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonBlue)" stroke-width="4" filter="url(#glow)" stroke-linejoin="round"/>
+    <polygon points="0,30 -100,-10 -100,-50 0,-10" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonBlue)" stroke-width="4" filter="url(#glow)" stroke-linejoin="round"/>
 
-    <circle cx="45" cy="45" r="5" fill="url(#glowGrad)" />
-    <line x1="45" y1="75" x2="45" y2="50" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="4,4" />
+    <!-- Scanning gridlines on the pages (Extracting Data) -->
+    <path d="M 20 10 L 80 -15 M 40 20 L 90 -5 M 60 30 L 100 5 M 80 40 L 110 15" stroke="url(#neonBlue)" stroke-width="2" stroke-dasharray="3,5" opacity="0.8"/>
+    <path d="M -20 10 L -80 -15 M -40 20 L -90 -5 M -60 30 L -100 5 M -80 40 L -110 15" stroke="url(#neonBlue)" stroke-width="2" stroke-dasharray="3,5" opacity="0.8"/>
 
-    <circle cx="155" cy="45" r="5" fill="url(#glowGrad)" />
-    <line x1="155" y1="75" x2="155" y2="50" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="4,4" />
+    <!-- Center Spine Core -->
+    <line x1="0" y1="-10" x2="0" y2="70" stroke="#ffffff" stroke-width="4" filter="url(#glow)" stroke-linecap="round"/>
+    
+    <!-- Central Extraction Pillar (Data Beam) -->
+    <polygon points="-6,-10 6,-10 2,-130 -2,-130" fill="url(#neonBlue)" filter="url(#heavyGlow)" opacity="0.9"/>
+    <polygon points="-2,-10 2,-10 0,-140" fill="#ffffff" filter="url(#glow)" opacity="1"/>
+
+    <!-- Floating Data Nodes & Particles (Intelligence) -->
+    <!-- Left Side -->
+    <circle cx="-50" cy="-60" r="4" fill="#00f2fe" filter="url(#glow)" />
+    <circle cx="-30" cy="-90" r="2.5" fill="#ffffff" filter="url(#glow)" />
+    <circle cx="-70" cy="-30" r="1.5" fill="#4facfe" />
+    <circle cx="-85" cy="-70" r="3" fill="url(#purpleGlow)" filter="url(#glow)" />
+    <line x1="-50" y1="-60" x2="-30" y2="-90" stroke="#00f2fe" stroke-width="1" opacity="0.5" stroke-dasharray="2,2"/>
+    
+    <!-- Right Side -->
+    <circle cx="50" cy="-55" r="3.5" fill="#00f2fe" filter="url(#glow)" />
+    <circle cx="35" cy="-100" r="2" fill="#ffffff" filter="url(#glow)" />
+    <circle cx="75" cy="-40" r="2" fill="#4facfe" />
+    <circle cx="90" cy="-80" r="4" fill="url(#purpleGlow)" filter="url(#glow)" />
+    <line x1="50" y1="-55" x2="35" y2="-100" stroke="#00f2fe" stroke-width="1" opacity="0.5" stroke-dasharray="2,2"/>
+    
+    <!-- Core orbiting rings (hacker/tech vibe) -->
+    <ellipse cx="0" cy="-30" rx="40" ry="12" fill="none" stroke="url(#neonBlue)" stroke-width="1.5" opacity="0.6" transform="rotate(-15)"/>
+    <ellipse cx="0" cy="-60" rx="25" ry="7" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8" stroke-dasharray="4,4" transform="rotate(10)"/>
+
   </g>
 </svg>
