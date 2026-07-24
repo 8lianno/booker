@@ -66,17 +66,22 @@ flowchart TD
     classDef ai fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff;
     classDef output fill:#8b5cf6,stroke:#fff,stroke-width:2px,color:#fff;
 
-    A([📚 1. Input Book]) :::input --> B(✂️ 2. Extract & Chunk) :::process
-    B -->|Send Text Chunks| C{🤖 3. NotebookLM AI} :::ai
+    A(["📚 1. Input Book"]) --> B("✂️ 2. Extract & Chunk")
+    B -->|"Send Text Chunks"| C{"🤖 3. NotebookLM AI"}
     
-    C -.->|If Fiction| D[Plot, Characters & Lore] :::ai
-    C -.->|If Non-Fiction| E[Mental Models & Tactics] :::ai
+    C -.->|"If Fiction"| D["Plot, Characters & Lore"]
+    C -.->|"If Non-Fiction"| E["Mental Models & Tactics"]
     
-    D --> F(📝 4. Build Master Dossier) :::process
+    D --> F("📝 4. Build Master Dossier")
     E --> F
     
-    F --> G(🔎 5. Verify & Score) :::process
-    G -->|Generate Files| H([✨ 6. Final EPUB / PDF / HTML]) :::output
+    F --> G("🔎 5. Verify & Score")
+    G -->|"Generate Files"| H(["✨ 6. Final EPUB / PDF / HTML"])
+
+    class A input;
+    class B,F,G process;
+    class C,D,E ai;
+    class H output;
 ```
 
 1. **Input**: You provide a raw EPUB book.
